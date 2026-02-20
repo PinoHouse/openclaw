@@ -78,7 +78,7 @@ export function normalizeToolParameters(
   // - Gemini rejects several JSON Schema keywords, so we scrub those.
   // - OpenAI rejects function tool schemas unless the *top-level* is `type: "object"`.
   //   (TypeBox root unions compile to `{ anyOf: [...] }` without `type`).
-  // - Anthropic (google-antigravity) expects full JSON Schema draft 2020-12 compliance.
+  // - Anthropic expects full JSON Schema draft 2020-12 compliance.
   //
   // Normalize once here so callers can always pass `tools` through unchanged.
 
